@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Application Status</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        DevOps App
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/">Home</a>
+
+        <a href="/about">About</a>
+
+        <a href="/status">Status</a>
+
+    </div>
+
+</nav>
+
+<section class="page">
+
+    <h1>Application Status</h1>
+
+    <div class="status-card">
+
+        <div class="status-row">
+            <span>Application</span>
+            <strong>🟢 RUNNING</strong>
+        </div>
+
+        <div class="status-row">
+            <span>Environment</span>
+            <strong>{{ environment }}</strong>
+        </div>
+
+        <div class="status-row">
+            <span>Platform</span>
+            <strong>AWS EC2</strong>
+        </div>
+
+        <div class="status-row">
+            <span>Container</span>
+            <strong>Docker</strong>
+        </div>
+
+        <div class="status-row">
+            <span>CI/CD</span>
+            <strong>Jenkins</strong>
+        </div>
+
+        <div class="status-row">
+            <span>Version</span>
+            <strong>{{ version }}</strong>
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+
+</html>
